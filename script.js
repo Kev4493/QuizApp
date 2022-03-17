@@ -69,6 +69,11 @@ function init() {
     showQuestion();
 }
 
+function startGame() { 
+    document.getElementById('start-screen').style = 'display: none';
+    document.getElementById('quiz-card').style = '';
+}
+
 
 function showQuestion() {
     if(gameIsOver()) {
@@ -167,7 +172,6 @@ function resetAnswerButtons() { // Hier werden die Farben von den Antworten entf
 
 
 function restartGame() {
-    document.getElementById('header-image').src = './img/quiz-bg-banner.jpg' // Der Pokal wird wieder zu dem Quizbanner geändert.
     document.getElementById('questionBody').style = ''; // QuestionBody wieder anzeigen.
     document.getElementById('endScreen').style = 'display: none'; // Endscreen ausblenden.
 

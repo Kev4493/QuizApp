@@ -1,6 +1,64 @@
+/* Fonts */
+
+/* rubik-regular - latin */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/rubik-v19-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/rubik-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/rubik-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/rubik-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/rubik-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/rubik-v19-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
+}
+  /* rubik-700 - latin */
+  @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/rubik-v19-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/rubik-v19-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/rubik-v19-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/rubik-v19-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/rubik-v19-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/rubik-v19-latin-700.svg#Rubik') format('svg'); /* Legacy iOS */
+}
+
+/* pt-sans-regular - latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/pt-sans-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/pt-sans-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/pt-sans-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/pt-sans-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/pt-sans-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/pt-sans-v16-latin-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+  /* pt-sans-700 - latin */
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/pt-sans-v16-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/pt-sans-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/pt-sans-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/pt-sans-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/pt-sans-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/pt-sans-v16-latin-700.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+
 body {
     background-color: #000000 !important;
+    font-family: 'Rubik' !important;
 }
+
 .container {
     min-height: 100vh;
     background-color: #000000 !important;
@@ -9,8 +67,161 @@ body {
     align-items: center;
 }
 
+/* Generelles */
+
+.bg-success, .bg-danger {
+    color: white;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.disabled {
+    background-color: rgba(255, 251, 251, 0.7) !important;
+}
+
+.active {
+    border-left: 5px solid white !important;
+}
+
+/* Navigation */
+
+.navbar- {
+    width: 10rem;
+    height: 665.88px;
+    background-color: #27355C;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.choose-game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.choose-game-btn {
+    margin-top: 2rem;
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    background-color: unset;
+    color: white;
+    text-transform: uppercase;
+}
+
+.choose-game-btn:hover {
+    background-color: #1d2744;
+}
+
+/* Progress-Bar */
+
+.progress {
+    height: 1.8rem !important;
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+/* Start Screen */
+
+.start-screen {
+    background-image: url(./img/brainbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 480px;
+    height: 665.88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.headline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline-container > h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    margin-top: 5rem;
+}
+
+.headline-container > h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'PT Sans';
+    margin-top: 1rem;
+}
+
+.start-game-btn {
+    width: 12rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #FF4E10;
+    border-radius: 12px;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.start-game-btn:hover {
+    background-color: #e64910;
+}
+
+.next-icon {
+    margin-left: 0.8rem;
+    height: 16px;
+}
+
+
+/* Quiz-Card */
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin-top: 2rem;
+    text-align: center;
+}
+
 .quiz-card {
     width: 30rem;
+    height: 665.88px;
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
 }
 
 .question-footer {
@@ -26,21 +237,12 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.bg-success, .bg-danger {
-    color: white;
-}
-
-.width-100 {
-    width: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
+/* Endscreen */
 
 .final-headline {
     font-size: 38px;
     margin-bottom: 32px;
+    font-weight: 700;
 }
 
 .button-row {
@@ -48,3 +250,27 @@ body {
     justify-content: center;
     margin-top: 16px;
 }
+
+.end-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+
+@media(max-width: 500px) {
+    .navbar- {
+        display: none;
+    }
+
+    .start-screen {
+        border-radius: 12px;
+    }
+}
+
+
+
+
+
+
